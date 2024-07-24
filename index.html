@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Library</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="title-container">
+        <svg
+          class="book-template"
+          viewBox="0 0 533.33 533.33"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+        >
+          <defs>
+            <linearGradient id="a">
+              <stop offset="0" />
+              <stop stop-color="#fff" offset="1" />
+            </linearGradient>
+            <linearGradient
+              id="d"
+              x1=".508"
+              x2=".508"
+              y1="1.0769"
+              y2="1.0385"
+              spreadMethod="repeat"
+              xlink:href="#a"
+            />
+            <linearGradient
+              id="e"
+              x1="1.2222"
+              x2="1.1667"
+              y1=".46094"
+              y2=".46094"
+              spreadMethod="repeat"
+              xlink:href="#a"
+            />
+          </defs>
+          <g fill-rule="evenodd" stroke-linejoin="round">
+            <g stroke="#000">
+              <g stroke-width="10">
+                <path
+                  d="m126.58 38.766l299.05 1.5823 2.374 386.87-303.01 1.582 1.582-390.03z"
+                  fill="currentColor"
+                />
+                <path
+                  d="m128.96 38.766c-10.285-1.5823-58.545 4.7469-58.545 37.184 8.7025 31.646 63.292-10.285 64.083-20.57s-5.538-17.405-5.538-16.614z"
+                  fill="#12242b"
+                />
+                <path
+                  d="m71.203 64.873c-1.609 4.7468-1.5084 379.75-0.9051 390.03 0.6034 10.285 0.5028 10.285 0.5028 10.285l0.4023-390.82v-9.4937z"
+                  fill="#122466"
+                />
+                <path
+                  d="m122.38 35.721l285.05 4.7688s-15.213 8.5838-30.428 14.306c-11.21 7.6301-25.622 22.89-25.622 21.936l-278.65-2.8613s4.0035-14.306 20.018-24.798c17.616-12.399 28.826-12.399 29.626-13.353z"
+                  fill="url(#d)"
+                />
+              </g>
+              <path
+                d="m408.23 45.886v380.6c-0.79098 0.806-15.823 0-27.69 8.064-11.076 4.838-22.943 24.997-26.899 30.642l-0.791-389.47s21.361-19.352 27.69-20.159c6.329-0.8063 28.482-9.6762 27.69-9.6763z"
+                fill="url(#e)"
+                stroke-width="9.905"
+              />
+            </g>
+            <g stroke-width="10">
+              <path
+                d="m71.202 75.158l299.05 1.5823 2.374 386.87-303.01 1.582 1.5822-390.03z"
+                fill="currentColor"
+                stroke="#000"
+              />
+              <path
+                d="m167.72 458.86s184.92 0.61456 194.42-5.7145c9.4937-6.3291 0.2049-253.78 0.2049-253.78s31.646 264.24-194.62 259.49z"
+                fill-opacity=".498"
+              />
+            </g>
+          </g>
+        </svg>
+        <p class="title">My Library</p>
+      </div>
+      <p class="thanks">
+        Image by
+        <a
+          href="https://pixabay.com/users/izoca-1502280/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=980732"
+          >izoca</a
+        >
+        from
+        <a
+          href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=980732"
+          >Pixabay</a
+        >
+      </p>
+    </div>
+    <button id="new-book">NEW BOOK</button>
+    <dialog id="add-book-dialog">
+      <form method="dialog">
+        <div class="form-inputs">
+          <div class="form-row">
+            <label for="author">Author:*</label
+            ><input
+              type="text"
+              id="author"
+              name="author"
+              placeholder="Author Name"
+              required
+            />
+          </div>
+          <div class="form-row">
+            <label for="title">Title:*</label
+            ><input
+              type="text"
+              id="title"
+              name="title"
+              placeholder="Book Title"
+              required
+            />
+          </div>
+          <div class="form-row">
+            <label for="pages">Pages:*</label
+            ><input
+              type="number"
+              id="pages"
+              name="pages"
+              placeholder="# of Pages"
+              required
+            />
+          </div>
+          <fieldset>
+            <legend>Have you read it?*</legend>
+            <label for="yes-read">Yes</label
+            ><input
+              type="radio"
+              name="read"
+              id="yes-read"
+              value="yes"
+              required
+            />
+            <label for="no-read">No</label
+            ><input type="radio" name="read" id="no-read" value="no" />
+          </fieldset>
+          <div class="form-row">
+            <label for="image-link">Image:</label
+            ><input
+              type="url"
+              id="image-link"
+              name="image-link"
+              placeholder="https://www.example.com/image.jpg"
+            />
+          </div>
+        </div>
+        <button id="add-book">Add Book</button>
+        <button id="close-dialog" type="button">Close</button>
+      </form>
+    </dialog>
+    <div class="book-display"></div>
+  </body>
+</html>
