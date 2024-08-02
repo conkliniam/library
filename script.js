@@ -16,21 +16,23 @@ addBook.addEventListener("click", handleAddBook);
 newBook.addEventListener("click", openBookDialog);
 closeDialog.addEventListener("click", () => addBookDialog.close());
 
-function Book(author, title, pages, read, url = "") {
-  this.author = author;
-  this.title = title;
-  this.pages = pages;
-  this.read = read;
-  this.url = url;
+class Book {
+  constructor(author, title, pages, read, url = "") {
+    this.author = author;
+    this.title = title;
+    this.pages = pages;
+    this.read = read;
+    this.url = url;
+  }
+
+  info() {
+    return `${this.pages} pages. ${this.read ? "Read" : "Not Read"}`;
+  }
+
+  toggleRead() {
+    this.read = !this.read;
+  }
 }
-
-Book.prototype.info = function () {
-  return `${this.pages} pages. ${this.read ? "Read" : "Not Read"}`;
-};
-
-Book.prototype.toggleRead = function () {
-  this.read = !this.read;
-};
 
 function openBookDialog() {
   addBookDialog.showModal();
